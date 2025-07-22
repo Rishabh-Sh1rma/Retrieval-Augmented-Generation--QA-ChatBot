@@ -17,34 +17,14 @@ A powerful Retrieval Augmented Generation (RAG) bot that:
 
 ## 🎨 Visual Walkthrough
 
-### 1. Upload your PDF or image
-![Upload](https://github.com/user-attachments/assets/10b91146-f22c-443c-85d4-a869452d8465)
-
-### 2. Extracts and processes text via OCR
-![OCR](https://github.com/user-attachments/assets/e9739534-d090-40dd-a240-dfc5ae2d7143)
-
-### 3. Smart semantic chunking and embeddings
-![Chunking](https://github.com/user-attachments/assets/19a379d7-8209-42d9-8a9c-ab78c57d29f4)
-
-### 4. Finds the most relevant passage
-![Search](https://github.com/user-attachments/assets/5cc770ba-9efc-49d1-b595-db0840f4cbba)
-
-### 5. AI-powered answer
-![Answer](https://github.com/user-attachments/assets/a26f5a23-7805-4f95-80a5-d7832ba9a20d)
-
-### 6. Chat and ask anything further!
-![Chat](https://github.com/user-attachments/assets/90f704d9-3cb6-4557-87af-fb01aeb13ae2)
-
----
-
-## 📱 Multi-Device Experience
-
-### Mobile Interface
-![Mobile](https://github.com/user-attachments/assets/16a3c20a-ffe0-475d-9900-9458975cd9cf)
-
-### Desktop Interface
-![Desktop](https://github.com/user-attachments/assets/870c3994-bcc3-44a1-bee7-5a90f56f7cee)
-
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/10b91146-f22c-443c-85d4-a869452d8465" alt="Upload" width="150" />
+  <img src="https://github.com/user-attachments/assets/e9739534-d090-40dd-a240-dfc5ae2d7143" alt="OCR" width="150" />
+  <img src="https://github.com/user-attachments/assets/19a379d7-8209-42d9-8a9c-ab78c57d29f4" alt="Chunking" width="150" />
+  <img src="https://github.com/user-attachments/assets/5cc770ba-9efc-49d1-b595-db0840f4cbba" alt="Search" width="150" />
+  <img src="https://github.com/user-attachments/assets/a26f5a23-7805-4f95-80a5-d7832ba9a20d" alt="Answer" width="150" />
+  <img src="https://github.com/user-attachments/assets/90f704d9-3cb6-4557-87af-fb01aeb13ae2" alt="Chat" width="150" />
+</p>
 ---
 
 ## 🛠️ How It Works
