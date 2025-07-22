@@ -25,7 +25,7 @@ A powerful Retrieval Augmented Generation (RAG) bot that:
   <img src="https://github.com/user-attachments/assets/19a379d7-8209-42d9-8a9c-ab78c57d29f4" alt="Chunking" width="150" />
   <img src="https://github.com/user-attachments/assets/5cc770ba-9efc-49d1-b595-db0840f4cbba" alt="Search" width="150" />
   <img src="https://github.com/user-attachments/assets/a26f5a23-7805-4f95-80a5-d7832ba9a20d" alt="Answer" width="150" />
-  <img src="https://github.com/user-attachments/assets/90f704d9-3cb6-4557-87af-fb01aeb13ae2" alt="Chat" width="150" />
+<!--   <img src="https://github.com/user-attachments/assets/90f704d9-3cb6-4557-87af-fb01aeb13ae2" alt="Chat" width="150" /> -->
 </p>
 ---
 
