@@ -1,6 +1,8 @@
 # 🤖 AI-Powered Document QA Bot
 
 Instantly ask questions and find answers from your images or PDF documents — all in a beautiful chat UI!
+<img width="1588" height="505" alt="image" src="https://github.com/user-attachments/assets/ce90238f-835b-4060-9810-75136fbf9710" />
+
 
 ---
 
