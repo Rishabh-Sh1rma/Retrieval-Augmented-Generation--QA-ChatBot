@@ -1,163 +1,96 @@
-# 🤖 AI-Powered Document Question Answering Bot
+🤖 AI-Powered Document QA Bot
+Instantly ask questions and find answers from your images or PDF documents—all in a beautiful chat UI!
 
-Welcome to the **Document QA Bot** — your intelligent assistant to **ask questions directly from your documents**! Whether it's PDFs, images, or scanned files, just upload your documents and get instant, accurate answers in natural language.
+🚀 What Is This Bot?
+A powerful Retrieval Augmented Generation (RAG) bot that:
 
----
+Takes images or PDFs as input
 
-## 🚀 What This Bot Does
+Extracts text using OCR
 
-No more endless searching through documents or manual reading! This bot:
+Allows you to ask questions about your documents
 
-- **Ingests PDFs & images**, extracts text using OCR 📝
-- **Creates semantic embeddings** for efficient search 🔍
-- Uses AI-powered models to **answer your natural language queries** based on your uploaded documents 💬
-- Enables a **chat-style interactive interface** for seamless user experience 💡
+Returns smart, contextual answers in a chat interface
 
----
+🎨 Visual Walkthrough
+<div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;"> <div style="flex: 1 1 320px; max-width: 350px; margin-bottom: 20px;"> <img src="https://github.com/user-attachments/assets/10b91146-f22c-443c-85d4-a869452d8465" alt="Document Upload" style="width:100%; border-radius:8px;"> <p align="center"><b>1. Upload your PDF or image</b></p> </div> <div style="flex: 1 1 320px; max-width: 350px; margin-bottom: 20px;"> <img src="https://github.com/user-attachments/assets/e9739534-d090-40dd-a240-dfc5ae2d7143" alt="OCR Extract" style="width:100%; border-radius:8px;"> <p align="center"><b>2. Extracts and processes text via OCR</b></p> </div> <div style="flex: 1 1 320px; max-width: 350px; margin-bottom: 20px;"> <img src="https://github.com/user-attachments/assets/19a379d7-8209-42d9-8a9c-ab78c57d29f4" alt="Chunking and Embedding" style="width:100%; border-radius:8px;"> <p align="center"><b>3. Smart semantic chunking and embeddings</b></p> </div> <div style="flex: 1 1 320px; max-width: 350px; margin-bottom: 20px;"> <img src="https://github.com/user-attachments/assets/5cc770ba-9efc-49d1-b595-db0840f4cbba" alt="Semantic Search" style="width:100%; border-radius:8px;"> <p align="center"><b>4. Finds the most relevant passage</b></p> </div> <div style="flex: 1 1 320px; max-width: 350px; margin-bottom: 20px;"> <img src="https://github.com/user-attachments/assets/a26f5a23-7805-4f95-80a5-d7832ba9a20d" alt="QA Result" style="width:100%; border-radius:8px;"> <p align="center"><b>5. AI-powered answer</b></p> </div> <div style="flex: 1 1 320px; max-width: 350px; margin-bottom: 20px;"> <img src="https://github.com/user-attachments/assets/90f704d9-3cb6-4557-87af-fb01aeb13ae2" alt="Chat and Followups" style="width:100%; border-radius:8px;"> <p align="center"><b>6. Chat and ask anything further!</b></p> </div> </div>
+📱 Multi-Device Experience
+<div style="display: flex; flex-wrap: wrap; gap: 40px; justify-content: center;"> <div style="flex: 1 1 320px; max-width: 350px; margin-bottom: 20px;"> <img src="https://github.com/user-attachments/assets/16a3c20a-ffe0-475d-9900-9458975cd9cf" alt="Mobile View" style="width:100%; border-radius:8px;"> <p align="center"><b>Mobile interface for anywhere access</b></p> </div> <div style="flex: 1 1 320px; max-width: 350px; margin-bottom: 20px;"> <img src="https://github.com/user-attachments/assets/870c3994-bcc3-44a1-bee7-5a90f56f7cee" alt="Desktop View" style="width:100%; border-radius:8px;"> <p align="center"><b>Desktop interface for productivity</b></p> </div> </div>
+🛠️ How It Works: Stepwise Flow
+Upload any PDF/image: Via drag-and-drop or file picker in the frontend.
 
-## 🎯 Problem It Solves
+OCR: Extracts text from PDFs & images using OCR.space API.
 
-📚 **Extracting information from large document corpora is tedious and slow.**
+Chunk, Embed, Store: Splits text, generates semantic embeddings (sentence-transformers), and stores in a FAISS vector database.
 
-- Traditional search is keyword-based and misses context.
-- Reading through numerous pages is time-consuming.
-- Getting precise answers quickly helps make better decisions.
+Ask Your Question: Enter a natural-language question about your document.
 
-This bot offers a **Rapid Retrieval-Augmented Generation (RAG)** system that combines semantic search and AI generation to make your document intelligence effortless.
+Find Most Relevant Chunks: The backend performs vector search for semantic similarity.
 
----
+AI Answer (or Top Chunk): Uses a free/open-source LLM or simply returns the top matching snippet as an answer.
 
-## 🛠️ How It Was Made
+Conversational UI: Get instant answers and ask follow-up questions, all in an interactive chat.
 
-This project is built with a modern tech stack combining tried-and-true and cutting-edge tools:
+🌍 Why This Bot?
+Save hours hunting through manuals, notes, or research PDFs
 
-| Component           | Technology                      |
-|---------------------|---------------------------------|
-| Backend API         | Python, FastAPI                  |
-| Document Parsing    | OCR.space API (free and easy)   |
-| Embeddings & Search | sentence-transformers, FAISS    |
-| Answer Generation   | Local LLM with llama-cpp / fallback |
-| Frontend UI         | React, Vite, Axios              |
+Students, professionals, and researchers can instantly query their own documents
 
-The system works by extracting text via OCR.space, converting document chunks into embeddings using sentence-transformers, storing and searching embeddings with FAISS, and answering questions by generating text through a local language model or returning the most relevant snippet.
+Works 100% free: all models run locally or use open free APIs—no OpenAI, no costs, no card!
 
----
+Ready for both mobile and desktop
 
-## 🔧 Challenges Faced
+💡 Tech Stack
+Backend: Python, FastAPI, FAISS, sentence-transformers, requests
 
-- **Document processing diversity:** PDFs, images, scans — needed robust OCR integration.
-- **Replacing costly APIs:** Transitioned from OpenAI to fully free & local ML models to avoid quota limits.
-- **Large file handling:** Managed environment files and dependencies carefully to optimize deployment.
-- **UI/UX design:** Created a clean, intuitive interface for both mobile and desktop users.
-  
----
+Frontend: React, Vite, Axios
 
-## 📝 Stepwise Workflow
+OCR: OCR.space API (free)
 
-### Step 1: Upload document  
-![Upload Interface](https://github.com/user-attachments/assets/10b91146-f22c-443c-85d4-a869452d8465)  
-Select PDFs or images to upload securely.
+Optional: Local LLMs (Llama-2, Phi-2, Mistral, etc.), or Hugging Face Inference API as fallback
 
-### Step 2: Extract text via OCR  
-![OCR Process](https://github.com/user-attachments/assets/e9739534-d090-40dd-a240-dfc5ae2d7143)  
-The backend sends files to OCR.space and extracts readable text from them.
+🧩 Key Features
+✔️ Upload PDFs/images (with scans or text)
 
-### Step 3: Text chunking and embedding  
-![Chunking and Vector Store](https://github.com/user-attachments/assets/19a379d7-8209-42d9-8a9c-ab78c57d29f4)  
-Extracted text is split into manageable chunks and encoded into vector embeddings with sentence-transformers.
+✔️ Extract and process text automatically
 
-### Step 4: Semantic search for relevant chunks  
-![Semantic relevance](https://github.com/user-attachments/assets/5cc770ba-9efc-49d1-b595-db0840f4cbba)  
-When you ask a question, the bot searches the vector store to find contextually relevant chunks.
+✔️ Powerful semantic search and chunking
 
-### Step 5: AI-powered answer generation  
-![AI Answer Generation](https://github.com/user-attachments/assets/a26f5a23-7805-4f95-80a5-d7832ba9a20d)  
-The relevant chunks are used by a local language model to craft a concise, human-readable answer.
+✔️ Chat-based Q&A over your documents (mobile & desktop)
 
-### Step 6: Interactive Chat UI  
-![Chat Interaction](https://github.com/user-attachments/assets/90f704d9-3cb6-4557-87af-fb01aeb13ae2)  
-Enjoy asking follow-up questions and exploring your documents conversationally on any device.
+✔️ 100% free and open source friendly
 
----
+🤔 Challenges & Learnings
+Transitioned from expensive APIs (OpenAI) to free/local tools
 
-## 📱 Mobile and Desktop Friendly
+Overcame large file and dependency issues during deployment
 
-Featuring responsive design, this bot works smoothly on:
+Refined UI to balance simplicity and power for all devices
 
-- **Mobile devices:**  
-  ![Mobile UI](https://github.com/user-attachments/assets/16a3c20a-ffe0-475d-9900-9458975cd9cf)
-
-- **Desktop/Laptop browsers:**  
-  ![Desktop UI](https://github.com/user-attachments/assets/870c3994-bcc3-44a1-bee7-5a90f56f7cee)  
-
----
-
-## ✅ Features Summary
-
-- Easy upload of documents (PDF & images)
-- OCR text extraction using a free API
-- Local semantic embeddings for robust search
-- AI-powered answer generation with open-source LLMs
-- Clean and interactive React frontend
-- Fully free/Open Source compatible workflow
-
----
-
-## 🙌 Try it Yourself!
-
-Clone the repo
+🚦 Quickstart
+```
+# 1. Clone the repo
 git clone https://github.com/yourusername/document-qa-bot.git
 
-Backend setup
+# 2. Backend setup
 cd backend
 python -m venv venv
-source venv/bin/activate # On Windows use venv\Scripts\activate
+source venv/bin/activate  # Windows: venv\Scripts\activate
 pip install -r requirements.txt
 uvicorn app.main:app --reload
 
-Frontend setup
+# 3. Frontend setup
 cd ../frontend
 npm install
 npm run dev
+```
+Open http://localhost:5173 in your browser to use!
 
+🙏 Contribute & Extend
+File issues, suggest features, or create Pull Requests
 
-Visit `http://localhost:5173` for frontend and start uploading documents & querying!
+Try integrating more LLMs or alternative free OCR APIs
 
----
+Improve responsiveness and accessibility
 
-## 🤝 Contributing
-
-Feel free to open issues or PR to improve:
-
-- Support more file formats and OCR providers
-- Integrate more powerful local or cloud LLMs
-- Enhance UI responsiveness and features
-
----
-
-## 📅 Last updated: July 22, 2025
-
----
-
-Thank you for checking out this project! Together, let's make document understanding effortless. 🚀✨
-
----
-
-# Credits
-
-- Built by **Rishabh Sharma**  
-- Powered by Open Source ML: SentenceTransformers, FAISS, llama-cpp  
-- OCR by OCR.space (free API)  
-- Frontend with React and Vite
-
----
-
-*Images courtesy of project screenshots showing actual app in action.*  
-![Screenshot 1](https://github.com/user-attachments/assets/870c3994-bcc3-44a1-bee7-5a90f56f7cee)  
-![Screenshot 2](https://github.com/user-attachments/assets/16a3c20a-ffe0-475d-9900-9458975cd9cf)  
-![Screenshot 3](https://github.com/user-attachments/assets/10b91146-f22c-443c-85d4-a869452d8465)  
-![Screenshot 4](https://github.com/user-attachments/assets/e9739534-d090-40dd-a240-dfc5ae2d7143)  
-![Screenshot 5](https://github.com/user-attachments/assets/19a379d7-8209-42d9-8a9c-ab78c57d29f4)  
-![Screenshot 6](https://github.com/user-attachments/assets/5cc770ba-9efc-49d1-b595-db0840f4cbba)  
-![Screenshot 7](https://github.com/user-attachments/assets/a26f5a23-7805-4f95-80a5-d7832ba9a20d)  
-![Screenshot 8](https://github.com/user-attachments/assets/90f704d9-3cb6-4557-87af-fb01aeb13ae2)  
+Add more visual cues and onboarding for new users
